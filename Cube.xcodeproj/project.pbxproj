@@ -14,6 +14,14 @@
 		F11ADEF8223A7FD50024F9C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F11ADEF6223A7FD50024F9C7 /* LaunchScreen.storyboard */; };
 		F11ADF03223A8F5E0024F9C7 /* CGShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF01223A8F5E0024F9C7 /* CGShapeUtil.swift */; };
 		F11ADF04223A8F5E0024F9C7 /* CGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF02223A8F5E0024F9C7 /* CGPathParser.swift */; };
+		F11ADF08223AB5400024F9C7 /* Triangle+Bisection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF07223AB5400024F9C7 /* Triangle+Bisection.swift */; };
+		F11ADF0A223AB8DB0024F9C7 /* Trig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF09223AB8DB0024F9C7 /* Trig.swift */; };
+		F11ADF0C223ABA260024F9C7 /* TrigParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF0B223ABA260024F9C7 /* TrigParser.swift */; };
+		F11ADF0E223ABA950024F9C7 /* CGPointParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF0D223ABA950024F9C7 /* CGPointParser.swift */; };
+		F11ADF10223ABAC00024F9C7 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF0F223ABAC00024F9C7 /* CGPointExtension.swift */; };
+		F11ADF12223ABBA10024F9C7 /* Triangle+Sin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF11223ABBA10024F9C7 /* Triangle+Sin.swift */; };
+		F11ADF14223ABCDC0024F9C7 /* TriangleMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF13223ABCDC0024F9C7 /* TriangleMath.swift */; };
+		F11ADF16223AC4AF0024F9C7 /* CGPointAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF15223AC4AF0024F9C7 /* CGPointAsserter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,14 @@
 		F11ADEF9223A7FD50024F9C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F11ADF01223A8F5E0024F9C7 /* CGShapeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGShapeUtil.swift; sourceTree = "<group>"; };
 		F11ADF02223A8F5E0024F9C7 /* CGPathParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPathParser.swift; sourceTree = "<group>"; };
+		F11ADF07223AB5400024F9C7 /* Triangle+Bisection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Triangle+Bisection.swift"; sourceTree = "<group>"; };
+		F11ADF09223AB8DB0024F9C7 /* Trig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trig.swift; sourceTree = "<group>"; };
+		F11ADF0B223ABA260024F9C7 /* TrigParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrigParser.swift; sourceTree = "<group>"; };
+		F11ADF0D223ABA950024F9C7 /* CGPointParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointParser.swift; sourceTree = "<group>"; };
+		F11ADF0F223ABAC00024F9C7 /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
+		F11ADF11223ABBA10024F9C7 /* Triangle+Sin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Triangle+Sin.swift"; sourceTree = "<group>"; };
+		F11ADF13223ABCDC0024F9C7 /* TriangleMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleMath.swift; sourceTree = "<group>"; };
+		F11ADF15223AC4AF0024F9C7 /* CGPointAsserter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointAsserter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +96,34 @@
 		F11ADF00223A8F5E0024F9C7 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				F11ADF05223AB51B0024F9C7 /* math */,
 				F11ADF01223A8F5E0024F9C7 /* CGShapeUtil.swift */,
 				F11ADF02223A8F5E0024F9C7 /* CGPathParser.swift */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		F11ADF05223AB51B0024F9C7 /* math */ = {
+			isa = PBXGroup;
+			children = (
+				F11ADF06223AB5240024F9C7 /* triangle */,
+				F11ADF09223AB8DB0024F9C7 /* Trig.swift */,
+				F11ADF0B223ABA260024F9C7 /* TrigParser.swift */,
+				F11ADF0D223ABA950024F9C7 /* CGPointParser.swift */,
+				F11ADF15223AC4AF0024F9C7 /* CGPointAsserter.swift */,
+				F11ADF0F223ABAC00024F9C7 /* CGPointExtension.swift */,
+			);
+			path = math;
+			sourceTree = "<group>";
+		};
+		F11ADF06223AB5240024F9C7 /* triangle */ = {
+			isa = PBXGroup;
+			children = (
+				F11ADF07223AB5400024F9C7 /* Triangle+Bisection.swift */,
+				F11ADF11223ABBA10024F9C7 /* Triangle+Sin.swift */,
+				F11ADF13223ABCDC0024F9C7 /* TriangleMath.swift */,
+			);
+			path = triangle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,10 +197,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11ADF14223ABCDC0024F9C7 /* TriangleMath.swift in Sources */,
+				F11ADF16223AC4AF0024F9C7 /* CGPointAsserter.swift in Sources */,
 				F11ADF03223A8F5E0024F9C7 /* CGShapeUtil.swift in Sources */,
 				F11ADF04223A8F5E0024F9C7 /* CGPathParser.swift in Sources */,
 				F11ADEF0223A7FD20024F9C7 /* ViewController.swift in Sources */,
+				F11ADF0C223ABA260024F9C7 /* TrigParser.swift in Sources */,
+				F11ADF0A223AB8DB0024F9C7 /* Trig.swift in Sources */,
 				F11ADEEE223A7FD20024F9C7 /* AppDelegate.swift in Sources */,
+				F11ADF08223AB5400024F9C7 /* Triangle+Bisection.swift in Sources */,
+				F11ADF0E223ABA950024F9C7 /* CGPointParser.swift in Sources */,
+				F11ADF12223ABBA10024F9C7 /* Triangle+Sin.swift in Sources */,
+				F11ADF10223ABAC00024F9C7 /* CGPointExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
