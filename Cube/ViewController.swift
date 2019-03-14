@@ -95,6 +95,39 @@ class ViewController: UIViewController {
       //use law of ratios to draw z-points of the cube.
       
       //connect the z points to complete the cube
+      
+      
+      //find ratio of half the length of the cube of quad_center_to_vp1
+      let halfSidePT:CGPoint = Util.convergingPoint(a: (vp1,quadCenter), b:(quad.p2,quad.p3) )
+      let halfSideDist:CGFloat = CGPointParser.distance(quadCenter,halfSidePT)
+      let vp1Length:CGFloat = CGPointParser.distance(quadCenter, vp1)
+      let halfSideRatio:CGFloat = vp1Length / halfSideDist
+      
+      //interpolate this from quad_center to vp3
+      let distToVP3:CGFloat = CGPointParser.distance(quadCenter, vp3)
+      let vp3HalfSideRatio:CGFloat = halfSideRatio * distToVP3
+      
+      
+      //find ratio of halflength in the dir of vp3
+      
+      //interpolate from all points quad.p3 to vp3
+//      let halfSideTowardsVP3:CGPoint = CGPoint.interpolate(quadCenter, vp3, vp3HalfSideRatio) 👈
+      
+      //store the points
+      
+      //do the same for the outward rect
+      
+      //return the Cube as a tuple point container
+      
+      //scale the bottom of the cube from the pivot of its axis (8th of the length)
+      
+      //make animation of lines going to this scaled bottom
+      
+      //make a solution for when the perspective is 2 point and 1 point
+      
+      // test with camera and 4x4 plane
+      
+      // 🎉
    }
 }
 extension ViewController{

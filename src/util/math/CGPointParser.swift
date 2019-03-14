@@ -3,6 +3,16 @@ import UIKit
 
 class CGPointParser{
    /**
+    * Returns a point between PARAM: p1 and PARAM: p2 multiplied by the PARAM: scalar
+    * PARAM: scalar: the scalar is between 0 and 1
+    * NOTE: PointParser.interpolate() is different form the Adobe flash native Point.interpolate, the later multiplies from p2 to p1,
+    * the former multiplies form p1 tp p2 which i think is more logical
+    * TODO: using Math.abs could be more optimized? this optimization needs research. check the proto site
+    */
+   static func interpolate(_ a:CGPoint, _ b:CGPoint, _ scalar:CGFloat)->CGPoint {
+      return CGPoint(x:a.x.interpolate(b.x, scalar), y:a.y.interpolate(b.y, scalar))
+   }
+   /**
     * Returns the distance between two points
     * NOTE: Math formula for distance of two points is: AB2 = dx2 + dy2 (distance = sqrt(dx2 + dy2)) where one side is dx - the difference in x-coordinates, and the other is dy - the difference in y-coordinates.
     * NOTE: Math formula: c^2=a^2+b^2 (||u|| = √h^2+v^2) (in triangle notation c= hypotenus etc)
@@ -34,5 +44,22 @@ class CGPointParser{
     */
    static func add(_ a:CGPoint,_ b:CGPoint) -> CGPoint {
       return CGPoint(x:a.x+b.x, y:a.y+b.y)
+   }
+}
+
+extension CGFloat{
+   func interpolate(_ to:CGFloat, _ scalar:CGFloat) -> CGFloat{return CGFloatParser.interpolate(self,to,scalar)}
+}
+class CGFloatParser{
+   /**
+    * Linearly interpolation (lerp)
+    * PARAM: a: start number
+    * PARAM: b: end number
+    * PARAM: fraction: interpolation value (between 0 - 1) could also be named scalar
+    * EXAMPLE: interpolate(5, 15, 0.5) //10
+    * EXAMPLE: interpolate(a: -150.0, b: -375.0, fraction: 0.1)//-172.5, also works on negative values 👌
+    */
+   static func interpolate(_ a: CGFloat, _ b: CGFloat, _ fraction: CGFloat) -> CGFloat {
+      return fraction * (b - a) + a
    }
 }
