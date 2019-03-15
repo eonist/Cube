@@ -1,4 +1,5 @@
-import UIKit
+import QuartzCore
+import CoreGraphics
 
 class TriangleMath{
    /**

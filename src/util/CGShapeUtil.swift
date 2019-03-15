@@ -1,10 +1,11 @@
-import UIKit
+import QuartzCore
+import CoreGraphics
 
-class CGShapeUtil {
+public class CGShapeUtil {
    /**
     * polyline
     */
-   static func drawPolyLine(shapeLayer:CAShapeLayer, points:[CGPoint],style:(fillColor:UIColor?,strokeColor:UIColor?,thickness:CGFloat?)?, close:Bool = false) -> CAShapeLayer{
+   public static func drawPolyLine(shapeLayer:CAShapeLayer, points:[CGPoint],style:(fillColor:Color?,strokeColor:Color?,thickness:CGFloat?)?, close:Bool = false) -> CAShapeLayer{
       let path:CGMutablePath = CGPathParser.polyLine(points: points,close:close)
       shapeLayer.path = path/*Setup the CAShapeLayer with the path, colors, and line width*/
       shapeLayer.strokeColor = style?.strokeColor?.cgColor
@@ -24,7 +25,7 @@ class CGShapeUtil {
     *    return aPath
     * }()
     */
-   static func drawLine( lineLayer:CAShapeLayer, line:(p1:CGPoint, p2:CGPoint), style:(stroke:UIColor,strokeWidth:CGFloat)) -> CAShapeLayer{
+   static func drawLine( lineLayer:CAShapeLayer, line:(p1:CGPoint, p2:CGPoint), style:(stroke:Color,strokeWidth:CGFloat)) -> CAShapeLayer{
       let path:CGMutablePath = CGMutablePath()
       path.move(to: line.p1)
       path.addLine(to: line.p2)
@@ -38,14 +39,14 @@ class CGShapeUtil {
     * Draws circle
     * PARAM: progress: 0-1
     */
-   static func drawCircle(with circleLayer:CAShapeLayer, circle:(center:CGPoint,radius:CGFloat), style:(fill:UIColor, stroke:UIColor, strokeWidth:CGFloat), progress:CGFloat) -> CAShapeLayer{
-      let circlePath = UIBezierPath(arcCenter: CGPoint(x: circle.center.x, y: circle.center.y), radius:circle.radius, startAngle: CGFloat(Double.pi * -0.5), endAngle: CGFloat(Double.pi * 1.5), clockwise: true)/*The path should be the entire circle, for the strokeEnd and strokeStart to work*/
-      circleLayer.path = circlePath.cgPath/*Setup the CAShapeLayer with the path, colors, and line width*/
-      circleLayer.fillColor = style.fill.cgColor
-      circleLayer.strokeColor = style.stroke.cgColor
-      circleLayer.lineWidth = style.strokeWidth
-      circleLayer.lineCap = .round
-      circleLayer.strokeEnd = progress/*Sets progress of the stroke between predefined start and predefined end*/
-      return circleLayer
-   }
+//   static func drawCircle(with circleLayer:CAShapeLayer, circle:(center:CGPoint,radius:CGFloat), style:(fill:Color, stroke:Color, strokeWidth:CGFloat), progress:CGFloat) -> CAShapeLayer{
+//      let circlePath = UIBezierPath(arcCenter: CGPoint(x: circle.center.x, y: circle.center.y), radius:circle.radius, startAngle: CGFloat(Double.pi * -0.5), endAngle: CGFloat(Double.pi * 1.5), clockwise: true)/*The path should be the entire circle, for the strokeEnd and strokeStart to work*/
+//      circleLayer.path = circlePath.cgPath/*Setup the CAShapeLayer with the path, colors, and line width*/
+//      circleLayer.fillColor = style.fill.cgColor
+//      circleLayer.strokeColor = style.stroke.cgColor
+//      circleLayer.lineWidth = style.strokeWidth
+//      circleLayer.lineCap = .round
+//      circleLayer.strokeEnd = progress/*Sets progress of the stroke between predefined start and predefined end*/
+//      return circleLayer
+//   }
 }

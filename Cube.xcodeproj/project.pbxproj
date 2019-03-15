@@ -12,17 +12,65 @@
 		F11ADEF3223A7FD20024F9C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F11ADEF1223A7FD20024F9C7 /* Main.storyboard */; };
 		F11ADEF5223A7FD50024F9C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11ADEF4223A7FD50024F9C7 /* Assets.xcassets */; };
 		F11ADEF8223A7FD50024F9C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F11ADEF6223A7FD50024F9C7 /* LaunchScreen.storyboard */; };
-		F11ADF03223A8F5E0024F9C7 /* CGShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF01223A8F5E0024F9C7 /* CGShapeUtil.swift */; };
-		F11ADF04223A8F5E0024F9C7 /* CGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF02223A8F5E0024F9C7 /* CGPathParser.swift */; };
-		F11ADF08223AB5400024F9C7 /* Triangle+Bisection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF07223AB5400024F9C7 /* Triangle+Bisection.swift */; };
-		F11ADF0A223AB8DB0024F9C7 /* Trig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF09223AB8DB0024F9C7 /* Trig.swift */; };
-		F11ADF0C223ABA260024F9C7 /* TrigParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF0B223ABA260024F9C7 /* TrigParser.swift */; };
-		F11ADF0E223ABA950024F9C7 /* CGPointParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF0D223ABA950024F9C7 /* CGPointParser.swift */; };
-		F11ADF10223ABAC00024F9C7 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF0F223ABAC00024F9C7 /* CGPointExtension.swift */; };
-		F11ADF12223ABBA10024F9C7 /* Triangle+Sin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF11223ABBA10024F9C7 /* Triangle+Sin.swift */; };
-		F11ADF14223ABCDC0024F9C7 /* TriangleMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF13223ABCDC0024F9C7 /* TriangleMath.swift */; };
-		F11ADF16223AC4AF0024F9C7 /* CGPointAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF15223AC4AF0024F9C7 /* CGPointAsserter.swift */; };
+		F11ADF2A223C05F80024F9C7 /* Cube_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F11ADF28223C05F80024F9C7 /* Cube_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F11ADF2D223C05F80024F9C7 /* Cube_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11ADF26223C05F80024F9C7 /* Cube_iOS.framework */; };
+		F11ADF2E223C05F80024F9C7 /* Cube_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F11ADF26223C05F80024F9C7 /* Cube_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F11ADF3C223C060C0024F9C7 /* Cube_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F11ADF3A223C060B0024F9C7 /* Cube_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F11ADF40223C06150024F9C7 /* Triangle+Bisection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF07223AB5400024F9C7 /* Triangle+Bisection.swift */; };
+		F11ADF41223C06150024F9C7 /* Triangle+Sin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF11223ABBA10024F9C7 /* Triangle+Sin.swift */; };
+		F11ADF42223C06150024F9C7 /* TriangleMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF13223ABCDC0024F9C7 /* TriangleMath.swift */; };
+		F11ADF43223C06150024F9C7 /* Trig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF09223AB8DB0024F9C7 /* Trig.swift */; };
+		F11ADF44223C06150024F9C7 /* TrigParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF0B223ABA260024F9C7 /* TrigParser.swift */; };
+		F11ADF45223C06150024F9C7 /* CGPointParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF0D223ABA950024F9C7 /* CGPointParser.swift */; };
+		F11ADF46223C06150024F9C7 /* CGPointAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF15223AC4AF0024F9C7 /* CGPointAsserter.swift */; };
+		F11ADF47223C06150024F9C7 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF0F223ABAC00024F9C7 /* CGPointExtension.swift */; };
+		F11ADF48223C06150024F9C7 /* CGShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF01223A8F5E0024F9C7 /* CGShapeUtil.swift */; };
+		F11ADF49223C06150024F9C7 /* CGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF02223A8F5E0024F9C7 /* CGPathParser.swift */; };
+		F11ADF4A223C06150024F9C7 /* Hybrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF1F223C04770024F9C7 /* Hybrid.swift */; };
+		F11ADF4B223C06150024F9C7 /* CubeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF17223BEEA90024F9C7 /* CubeUtil.swift */; };
+		F11ADF4C223C06150024F9C7 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF19223BEED50024F9C7 /* Type.swift */; };
+		F11ADF4D223C06150024F9C7 /* CubeGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF1B223BEF6D0024F9C7 /* CubeGraphic.swift */; };
+		F11ADF4E223C06150024F9C7 /* DebugCubeGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF1D223BF7190024F9C7 /* DebugCubeGraphic.swift */; };
+		F11ADF4F223C06160024F9C7 /* Triangle+Bisection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF07223AB5400024F9C7 /* Triangle+Bisection.swift */; };
+		F11ADF50223C06160024F9C7 /* Triangle+Sin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF11223ABBA10024F9C7 /* Triangle+Sin.swift */; };
+		F11ADF51223C06160024F9C7 /* TriangleMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF13223ABCDC0024F9C7 /* TriangleMath.swift */; };
+		F11ADF52223C06160024F9C7 /* Trig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF09223AB8DB0024F9C7 /* Trig.swift */; };
+		F11ADF53223C06160024F9C7 /* TrigParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF0B223ABA260024F9C7 /* TrigParser.swift */; };
+		F11ADF54223C06160024F9C7 /* CGPointParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF0D223ABA950024F9C7 /* CGPointParser.swift */; };
+		F11ADF55223C06160024F9C7 /* CGPointAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF15223AC4AF0024F9C7 /* CGPointAsserter.swift */; };
+		F11ADF56223C06160024F9C7 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF0F223ABAC00024F9C7 /* CGPointExtension.swift */; };
+		F11ADF57223C06160024F9C7 /* CGShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF01223A8F5E0024F9C7 /* CGShapeUtil.swift */; };
+		F11ADF58223C06160024F9C7 /* CGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF02223A8F5E0024F9C7 /* CGPathParser.swift */; };
+		F11ADF59223C06160024F9C7 /* Hybrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF1F223C04770024F9C7 /* Hybrid.swift */; };
+		F11ADF5A223C06160024F9C7 /* CubeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF17223BEEA90024F9C7 /* CubeUtil.swift */; };
+		F11ADF5B223C06160024F9C7 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF19223BEED50024F9C7 /* Type.swift */; };
+		F11ADF5C223C06160024F9C7 /* CubeGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF1B223BEF6D0024F9C7 /* CubeGraphic.swift */; };
+		F11ADF5D223C06160024F9C7 /* DebugCubeGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF1D223BF7190024F9C7 /* DebugCubeGraphic.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F11ADF2B223C05F80024F9C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F11ADEE2223A7FD20024F9C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F11ADF25223C05F80024F9C7;
+			remoteInfo = "Cube-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F11ADF32223C05F80024F9C7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F11ADF2E223C05F80024F9C7 /* Cube_iOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F11ADEEA223A7FD20024F9C7 /* Cube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cube.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,10 +90,36 @@
 		F11ADF11223ABBA10024F9C7 /* Triangle+Sin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Triangle+Sin.swift"; sourceTree = "<group>"; };
 		F11ADF13223ABCDC0024F9C7 /* TriangleMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleMath.swift; sourceTree = "<group>"; };
 		F11ADF15223AC4AF0024F9C7 /* CGPointAsserter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointAsserter.swift; sourceTree = "<group>"; };
+		F11ADF17223BEEA90024F9C7 /* CubeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeUtil.swift; sourceTree = "<group>"; };
+		F11ADF19223BEED50024F9C7 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		F11ADF1B223BEF6D0024F9C7 /* CubeGraphic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeGraphic.swift; sourceTree = "<group>"; };
+		F11ADF1D223BF7190024F9C7 /* DebugCubeGraphic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugCubeGraphic.swift; sourceTree = "<group>"; };
+		F11ADF1F223C04770024F9C7 /* Hybrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hybrid.swift; sourceTree = "<group>"; };
+		F11ADF26223C05F80024F9C7 /* Cube_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cube_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11ADF28223C05F80024F9C7 /* Cube_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cube_iOS.h; sourceTree = "<group>"; };
+		F11ADF29223C05F80024F9C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F11ADF38223C060B0024F9C7 /* Cube_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cube_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11ADF3A223C060B0024F9C7 /* Cube_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cube_macOS.h; sourceTree = "<group>"; };
+		F11ADF3B223C060C0024F9C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F11ADEE7223A7FD20024F9C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11ADF2D223C05F80024F9C7 /* Cube_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F11ADF23223C05F80024F9C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F11ADF35223C060B0024F9C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,6 +134,8 @@
 			children = (
 				F11ADEFF223A8F5E0024F9C7 /* src */,
 				F11ADEEC223A7FD20024F9C7 /* Cube */,
+				F11ADF27223C05F80024F9C7 /* Cube-iOS */,
+				F11ADF39223C060B0024F9C7 /* Cube-macOS */,
 				F11ADEEB223A7FD20024F9C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				F11ADEEA223A7FD20024F9C7 /* Cube.app */,
+				F11ADF26223C05F80024F9C7 /* Cube_iOS.framework */,
+				F11ADF38223C060B0024F9C7 /* Cube_macOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +167,10 @@
 			isa = PBXGroup;
 			children = (
 				F11ADF00223A8F5E0024F9C7 /* util */,
+				F11ADF17223BEEA90024F9C7 /* CubeUtil.swift */,
+				F11ADF19223BEED50024F9C7 /* Type.swift */,
+				F11ADF1B223BEF6D0024F9C7 /* CubeGraphic.swift */,
+				F11ADF1D223BF7190024F9C7 /* DebugCubeGraphic.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -99,6 +181,7 @@
 				F11ADF05223AB51B0024F9C7 /* math */,
 				F11ADF01223A8F5E0024F9C7 /* CGShapeUtil.swift */,
 				F11ADF02223A8F5E0024F9C7 /* CGPathParser.swift */,
+				F11ADF1F223C04770024F9C7 /* Hybrid.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -126,7 +209,44 @@
 			path = triangle;
 			sourceTree = "<group>";
 		};
+		F11ADF27223C05F80024F9C7 /* Cube-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F11ADF28223C05F80024F9C7 /* Cube_iOS.h */,
+				F11ADF29223C05F80024F9C7 /* Info.plist */,
+			);
+			path = "Cube-iOS";
+			sourceTree = "<group>";
+		};
+		F11ADF39223C060B0024F9C7 /* Cube-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				F11ADF3A223C060B0024F9C7 /* Cube_macOS.h */,
+				F11ADF3B223C060C0024F9C7 /* Info.plist */,
+			);
+			path = "Cube-macOS";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F11ADF21223C05F80024F9C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11ADF2A223C05F80024F9C7 /* Cube_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F11ADF33223C060B0024F9C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11ADF3C223C060C0024F9C7 /* Cube_macOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		F11ADEE9223A7FD20024F9C7 /* Cube */ = {
@@ -136,15 +256,53 @@
 				F11ADEE6223A7FD20024F9C7 /* Sources */,
 				F11ADEE7223A7FD20024F9C7 /* Frameworks */,
 				F11ADEE8223A7FD20024F9C7 /* Resources */,
+				F11ADF32223C05F80024F9C7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F11ADF2C223C05F80024F9C7 /* PBXTargetDependency */,
 			);
 			name = Cube;
 			productName = Cube;
 			productReference = F11ADEEA223A7FD20024F9C7 /* Cube.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F11ADF25223C05F80024F9C7 /* Cube-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F11ADF2F223C05F80024F9C7 /* Build configuration list for PBXNativeTarget "Cube-iOS" */;
+			buildPhases = (
+				F11ADF21223C05F80024F9C7 /* Headers */,
+				F11ADF22223C05F80024F9C7 /* Sources */,
+				F11ADF23223C05F80024F9C7 /* Frameworks */,
+				F11ADF24223C05F80024F9C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cube-iOS";
+			productName = "Cube-iOS";
+			productReference = F11ADF26223C05F80024F9C7 /* Cube_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F11ADF37223C060B0024F9C7 /* Cube-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F11ADF3D223C060C0024F9C7 /* Build configuration list for PBXNativeTarget "Cube-macOS" */;
+			buildPhases = (
+				F11ADF33223C060B0024F9C7 /* Headers */,
+				F11ADF34223C060B0024F9C7 /* Sources */,
+				F11ADF35223C060B0024F9C7 /* Frameworks */,
+				F11ADF36223C060B0024F9C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cube-macOS";
+			productName = "Cube-macOS";
+			productReference = F11ADF38223C060B0024F9C7 /* Cube_macOS.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -157,6 +315,12 @@
 				ORGANIZATIONNAME = FutureLab;
 				TargetAttributes = {
 					F11ADEE9223A7FD20024F9C7 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F11ADF25223C05F80024F9C7 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F11ADF37223C060B0024F9C7 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -175,6 +339,8 @@
 			projectRoot = "";
 			targets = (
 				F11ADEE9223A7FD20024F9C7 /* Cube */,
+				F11ADF25223C05F80024F9C7 /* Cube-iOS */,
+				F11ADF37223C060B0024F9C7 /* Cube-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -190,6 +356,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F11ADF24223C05F80024F9C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F11ADF36223C060B0024F9C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -197,22 +377,64 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F11ADF14223ABCDC0024F9C7 /* TriangleMath.swift in Sources */,
-				F11ADF16223AC4AF0024F9C7 /* CGPointAsserter.swift in Sources */,
-				F11ADF03223A8F5E0024F9C7 /* CGShapeUtil.swift in Sources */,
-				F11ADF04223A8F5E0024F9C7 /* CGPathParser.swift in Sources */,
 				F11ADEF0223A7FD20024F9C7 /* ViewController.swift in Sources */,
-				F11ADF0C223ABA260024F9C7 /* TrigParser.swift in Sources */,
-				F11ADF0A223AB8DB0024F9C7 /* Trig.swift in Sources */,
 				F11ADEEE223A7FD20024F9C7 /* AppDelegate.swift in Sources */,
-				F11ADF08223AB5400024F9C7 /* Triangle+Bisection.swift in Sources */,
-				F11ADF0E223ABA950024F9C7 /* CGPointParser.swift in Sources */,
-				F11ADF12223ABBA10024F9C7 /* Triangle+Sin.swift in Sources */,
-				F11ADF10223ABAC00024F9C7 /* CGPointExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F11ADF22223C05F80024F9C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11ADF42223C06150024F9C7 /* TriangleMath.swift in Sources */,
+				F11ADF46223C06150024F9C7 /* CGPointAsserter.swift in Sources */,
+				F11ADF4B223C06150024F9C7 /* CubeUtil.swift in Sources */,
+				F11ADF47223C06150024F9C7 /* CGPointExtension.swift in Sources */,
+				F11ADF48223C06150024F9C7 /* CGShapeUtil.swift in Sources */,
+				F11ADF41223C06150024F9C7 /* Triangle+Sin.swift in Sources */,
+				F11ADF4A223C06150024F9C7 /* Hybrid.swift in Sources */,
+				F11ADF4C223C06150024F9C7 /* Type.swift in Sources */,
+				F11ADF40223C06150024F9C7 /* Triangle+Bisection.swift in Sources */,
+				F11ADF4E223C06150024F9C7 /* DebugCubeGraphic.swift in Sources */,
+				F11ADF45223C06150024F9C7 /* CGPointParser.swift in Sources */,
+				F11ADF49223C06150024F9C7 /* CGPathParser.swift in Sources */,
+				F11ADF44223C06150024F9C7 /* TrigParser.swift in Sources */,
+				F11ADF43223C06150024F9C7 /* Trig.swift in Sources */,
+				F11ADF4D223C06150024F9C7 /* CubeGraphic.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F11ADF34223C060B0024F9C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11ADF51223C06160024F9C7 /* TriangleMath.swift in Sources */,
+				F11ADF55223C06160024F9C7 /* CGPointAsserter.swift in Sources */,
+				F11ADF5A223C06160024F9C7 /* CubeUtil.swift in Sources */,
+				F11ADF56223C06160024F9C7 /* CGPointExtension.swift in Sources */,
+				F11ADF57223C06160024F9C7 /* CGShapeUtil.swift in Sources */,
+				F11ADF50223C06160024F9C7 /* Triangle+Sin.swift in Sources */,
+				F11ADF59223C06160024F9C7 /* Hybrid.swift in Sources */,
+				F11ADF5B223C06160024F9C7 /* Type.swift in Sources */,
+				F11ADF4F223C06160024F9C7 /* Triangle+Bisection.swift in Sources */,
+				F11ADF5D223C06160024F9C7 /* DebugCubeGraphic.swift in Sources */,
+				F11ADF54223C06160024F9C7 /* CGPointParser.swift in Sources */,
+				F11ADF58223C06160024F9C7 /* CGPathParser.swift in Sources */,
+				F11ADF53223C06160024F9C7 /* TrigParser.swift in Sources */,
+				F11ADF52223C06160024F9C7 /* Trig.swift in Sources */,
+				F11ADF5C223C06160024F9C7 /* CubeGraphic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F11ADF2C223C05F80024F9C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F11ADF25223C05F80024F9C7 /* Cube-iOS */;
+			targetProxy = F11ADF2B223C05F80024F9C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F11ADEF1223A7FD20024F9C7 /* Main.storyboard */ = {
@@ -353,6 +575,7 @@
 		F11ADEFD223A7FD50024F9C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Cube/Info.plist;
@@ -370,6 +593,7 @@
 		F11ADEFE223A7FD50024F9C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Cube/Info.plist;
@@ -381,6 +605,120 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F11ADF30223C05F80024F9C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Cube-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.futurelab.Cube-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F11ADF31223C05F80024F9C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Cube-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.futurelab.Cube-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F11ADF3E223C060C0024F9C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Cube-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.futurelab.Cube-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F11ADF3F223C060C0024F9C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Cube-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.futurelab.Cube-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -401,6 +739,24 @@
 			buildConfigurations = (
 				F11ADEFD223A7FD50024F9C7 /* Debug */,
 				F11ADEFE223A7FD50024F9C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F11ADF2F223C05F80024F9C7 /* Build configuration list for PBXNativeTarget "Cube-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F11ADF30223C05F80024F9C7 /* Debug */,
+				F11ADF31223C05F80024F9C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F11ADF3D223C060C0024F9C7 /* Build configuration list for PBXNativeTarget "Cube-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F11ADF3E223C060C0024F9C7 /* Debug */,
+				F11ADF3F223C060C0024F9C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

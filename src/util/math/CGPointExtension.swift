@@ -1,4 +1,5 @@
-import UIKit
+import QuartzCore
+import CoreGraphics
 
 extension CGPoint{
    static func polarPoint(_ radius:CGFloat, _ angle:CGFloat) -> CGPoint {/*Convenience*/
