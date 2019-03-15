@@ -1,5 +1,5 @@
 ![mit](https://img.shields.io/badge/License-MIT-brightgreen.svg) ![platform](https://img.shields.io/badge/Platform-iOS-blue.svg) ![platform](https://img.shields.io/badge/Platform-macOS-blue.svg) ![Lang](https://img.shields.io/badge/Language-Swift%204.2-orange.svg)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![codebeat badge](https://codebeat.co/badges/a14b185c-f5ec-4fab-ae83-6141e4f24a24)](https://codebeat.co/a/30n1st/projects/github-com-eonist-cube-master)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![codebeat badge](https://codebeat.co/badges/75878ed6-7cda-47d5-9f8d-67c1dd43ab6e)](https://codebeat.co/projects/github-com-eonist-cube-master)
 
 # Cube
 
