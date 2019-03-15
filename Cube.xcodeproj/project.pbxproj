@@ -192,9 +192,7 @@
 				F11ADF06223AB5240024F9C7 /* triangle */,
 				F11ADF09223AB8DB0024F9C7 /* Trig.swift */,
 				F11ADF0B223ABA260024F9C7 /* TrigParser.swift */,
-				F11ADF0D223ABA950024F9C7 /* CGPointParser.swift */,
-				F11ADF15223AC4AF0024F9C7 /* CGPointAsserter.swift */,
-				F11ADF0F223ABAC00024F9C7 /* CGPointExtension.swift */,
+				F11ADF5E223C461A0024F9C7 /* point */,
 			);
 			path = math;
 			sourceTree = "<group>";
@@ -225,6 +223,16 @@
 				F11ADF3B223C060C0024F9C7 /* Info.plist */,
 			);
 			path = "Cube-macOS";
+			sourceTree = "<group>";
+		};
+		F11ADF5E223C461A0024F9C7 /* point */ = {
+			isa = PBXGroup;
+			children = (
+				F11ADF0D223ABA950024F9C7 /* CGPointParser.swift */,
+				F11ADF15223AC4AF0024F9C7 /* CGPointAsserter.swift */,
+				F11ADF0F223ABAC00024F9C7 /* CGPointExtension.swift */,
+			);
+			path = point;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

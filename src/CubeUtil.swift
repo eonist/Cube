@@ -36,6 +36,12 @@ extension CubeUtil{
       let verA:Line = (quad.p1,quad.p3)//get vertical point pair / line pair
       let verB:Line = (quad.p2,quad.p4)
       let vp2:CGPoint = Util.convergingPoint(a:verA,b:verB)//find convering point of vertical lines
+      if vp2.x.isInfinite && vp2.y.isInfinite {
+         let median = CGPoint.interpolate(verA.p2, verB.p2, 0.5)
+         let angle = Trig.angle(verA.p1, verA.p2)
+         let polarPT = CGPoint.polarPoint(CGFloat(Int.max), angle)
+         return median.add(polarPT)
+      }
       return vp2
    }
    /**

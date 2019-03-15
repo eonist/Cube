@@ -3,7 +3,7 @@
 
 # Cube
 
-<img width="320" alt="img" src="https://github.com/stylekit/img/blob/master/Screenshot 2019-03-15 at 16.58.07.png?raw=true">
+<img width="503" alt="img" src="https://github.com/stylekit/img/blob/master/Screenshot 2019-03-15 at 22.05.04.png?raw=true">
 
 ### What is it
 Convert perspective square to perspective cube
@@ -29,5 +29,6 @@ cubeGraphic.drawCube(cube: cube)
 ```
 
 ### Todo:
-- Add support for 1 point perspective Quadrilaterals
-- Add support for square w/o perspective
+- Add support for 1 point perspective Quadrilaterals ✅
+- Add support for horizontal 1p quads (co-linear, epsilon etc) 👈
+- Add support for square w/o perspective ✅
