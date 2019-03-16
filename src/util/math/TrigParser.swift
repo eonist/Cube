@@ -49,4 +49,15 @@ class TrigParser {
    static func difference(_ startAngle:CGFloat,_ endAngle:CGFloat)->CGFloat {
       return atan2(sin(endAngle - startAngle), cos(endAngle - startAngle))
    }
+   /**
+    * Angle span
+    */
+   static func angleSpan3(pivot:CGPoint,a:CGPoint,b:CGPoint)->CGFloat{
+      let angle1 = Trig.angle(pivot, a)
+      Swift.print("angle1:  \(angle1)")
+      let angle2 = Trig.angle(pivot, b)
+      Swift.print("angle2:  \(angle2)")
+      let A = abs(Trig.difference(angle1, angle2))
+      return A
+   }
 }

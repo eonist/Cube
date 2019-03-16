@@ -39,14 +39,18 @@ public class CGShapeUtil {
     * Draws circle
     * PARAM: progress: 0-1
     */
-//   static func drawCircle(with circleLayer:CAShapeLayer, circle:(center:CGPoint,radius:CGFloat), style:(fill:Color, stroke:Color, strokeWidth:CGFloat), progress:CGFloat) -> CAShapeLayer{
-//      let circlePath = UIBezierPath(arcCenter: CGPoint(x: circle.center.x, y: circle.center.y), radius:circle.radius, startAngle: CGFloat(Double.pi * -0.5), endAngle: CGFloat(Double.pi * 1.5), clockwise: true)/*The path should be the entire circle, for the strokeEnd and strokeStart to work*/
-//      circleLayer.path = circlePath.cgPath/*Setup the CAShapeLayer with the path, colors, and line width*/
-//      circleLayer.fillColor = style.fill.cgColor
-//      circleLayer.strokeColor = style.stroke.cgColor
-//      circleLayer.lineWidth = style.strokeWidth
-//      circleLayer.lineCap = .round
-//      circleLayer.strokeEnd = progress/*Sets progress of the stroke between predefined start and predefined end*/
-//      return circleLayer
-//   }
+   static func drawCircle(with circleLayer:CAShapeLayer, circle:(center:CGPoint,radius:CGFloat), style:(fill:Color, stroke:Color, strokeWidth:CGFloat), progress:CGFloat) -> CAShapeLayer{
+      let pt:CGPoint = .init(x: circle.center.x-circle.radius, y: circle.center.y-circle.radius)
+      let size:CGSize = .init(width: circle.radius*2, height: circle.radius*2)
+      let rect = CGRect.init(origin:pt , size:size )
+      
+      //      let circlePath:BezierPath = .init(ovalIn: rect)//(arcCenter: CGPoint(x: circle.center.x, y: circle.center.y), radius:circle.radius, startAngle: CGFloat(Double.pi * -0.5), endAngle: CGFloat(Double.pi * 1.5), clockwise: true)/*The path should be the entire circle, for the strokeEnd and strokeStart to work*/
+      circleLayer.path = CGPath.init(ellipseIn: rect, transform: nil)/*Setup the CAShapeLayer with the path, colors, and line width*/
+      circleLayer.fillColor = style.fill.cgColor
+      circleLayer.strokeColor = style.stroke.cgColor
+      circleLayer.lineWidth = style.strokeWidth
+      circleLayer.lineCap = .round
+      circleLayer.strokeEnd = progress/*Sets progress of the stroke between predefined start and predefined end*/
+      return circleLayer
+   }
 }

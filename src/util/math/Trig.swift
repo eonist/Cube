@@ -17,3 +17,14 @@ extension Trig{
    static func angleSpan(_ a:CGFloat, _ b:CGFloat, _ direction:String = Trig.clockWise) -> CGFloat{return TrigParser.angleSpan(a, b, direction)}
    static func difference(_ startAngle:CGFloat,_ endAngle:CGFloat)->CGFloat {return TrigParser.difference(startAngle, endAngle)}
 }
+
+class TrigAsserter{
+   /**
+    * new
+    */
+   static func isCoDir(_ a:CGFloat,_ b:CGFloat) -> Bool {
+      let normalizedA:CGFloat = Trig.normalize(a)
+      let normalizedB:CGFloat = Trig.normalize(b)
+      return normalizedA == normalizedB
+   }
+}

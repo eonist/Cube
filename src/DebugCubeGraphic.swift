@@ -16,27 +16,13 @@ open class DebugCubeGraphic:CubeGraphic{
    lazy var boxDot8:CAShapeLayer = createDot(color:.purple)
    
    //debug
-   lazy var vp1Dot:CAShapeLayer = self.createDot(color:.orange)
-   lazy var vp2Dot:CAShapeLayer = self.createDot(color:.blue)
-   lazy var quadCenterDot:CAShapeLayer = self.createDot(color:.yellow)
+   lazy var vp1Dot:CAShapeLayer = self.createDot(color:.magenta)
+   lazy var vp2Dot:CAShapeLayer = self.createDot(color:.cyan)
+   lazy var quadCenterDot:CAShapeLayer = self.createDot(color:.orange)
    lazy var orthPTDot:CAShapeLayer = self.createDot(color:.red)
    lazy var vp3Dot:CAShapeLayer = self.createDot(color:.purple)
-   override init() {
+   public override init() {
       super.init()
-//      vp1Dot.frame.origin = vp1
-//      vp2Dot.frame.origin = vp2
-//      quadCenterDot.frame.origin = quadCenter
-//      _ = view.createLine(line: (vp1,quadCenter), color: .gray)
-      //      _ = view.createLine(line: (vp2,quadCenter), color: .orange)
-      
-      
-      //      _ = view.createLine(line: (vp1,vp2), color: .purple)
-//      orthPTDot.frame.origin = orthoPoint
-//      vp3Dot.frame.origin = vp3
-//      let rayPT = vp1.add(CGPointParser.polar(300, VP1_VP3))
-//      _ = self.createLine(line: (vp1,rayPT), color: .green)
-//      _ = self.createLine(line: (orthoPoint,quadCenter), color: .magenta)
-//      _ = self.createLine(line: (orthoPoint,vp3), color: .cyan)
 //      boxDot1.frame.origin = box1TowardsVP3
 //      boxDot2.frame.origin = box2TowardsVP3
 //      boxDot3.frame.origin = box3TowardsVP3
@@ -56,6 +42,34 @@ open class DebugCubeGraphic:CubeGraphic{
    }
 }
 extension DebugCubeGraphic{
+   /**
+    *
+    */
+   public func debug(quad:Quad){
+      let vp1 = CubeUtil.vp1(quad: quad)
+      Swift.print("vp1:  \(vp1)")
+      let vp2 = CubeUtil.vp2(quad: quad)
+      Swift.print("vp2:  \(vp2)")
+      let quadCenter = CubeHelper.diagonalCenter(quadPoints: quad)
+      Swift.print("quadCenter:  \(quadCenter)")
+      let vp3 = CubeUtil.vp3(vp1: vp1, vp2: vp2, quadCenter: quadCenter)
+      vp1Dot.frame.origin = vp1
+      vp2Dot.frame.origin = vp2
+      vp3Dot.frame.origin = vp3
+      quadCenterDot.position = quadCenter
+      _ = self.createLine(line: (vp1,quadCenter), color: .gray)
+      _ = self.createLine(line: (vp2,quadCenter), color: .orange)
+      _ = self.createLine(line: (vp1,vp2), color: .purple)
+
+      let orthoPoint:CGPoint = CubeHelper.orthoPoint(line: (vp1,vp2), point: quadCenter)//find point on vanishingpointline, ortho to diagonal center of quad
+
+            orthPTDot.frame.origin = orthoPoint
+//
+//      //      let rayPT = vp1.add(CGPointParser.polar(300, VP1_VP3))
+//      //      _ = self.createLine(line: (vp1,rayPT), color: .green)
+//            _ = self.createLine(line: (orthoPoint,quadCenter), color: .magenta)
+//            _ = self.createLine(line: (orthoPoint,vp3), color: .cyan)
+   }
    func drawVPTriangle(){
       //      //Draw vp-triangle
       let vpTriangleShape:CAShapeLayer = .init()
@@ -71,7 +85,7 @@ extension DebugCubeGraphic{
     */
    func createDot(color:Color) -> CAShapeLayer{
       let vp1Dot:CAShapeLayer = .init()
-//      _ = CGShapeUtil.drawCircle(with: vp1Dot, circle: (.zero,4), style: (color,.clear,0), progress: 1)
+      _ = CGShapeUtil.drawCircle(with: vp1Dot, circle: (.zero,4), style: (color,.clear,0), progress: 1)
       self.addSublayer(vp1Dot)
       return vp1Dot
    }

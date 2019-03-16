@@ -46,7 +46,6 @@ class CGPointParser{
       return CGPoint(x:a.x+b.x, y:a.y+b.y)
    }
 }
-
 extension CGFloat{
    func interpolate(_ to:CGFloat, _ scalar:CGFloat) -> CGFloat{return CGFloatParser.interpolate(self,to,scalar)}
 }

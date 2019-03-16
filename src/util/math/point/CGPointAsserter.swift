@@ -30,4 +30,14 @@ class CGPointAsserter{
       let len:CGFloat = CGPoint.distance(p1A, p2A)
       return len > CGPoint.distance(p1B, p2A) && len > CGPoint.distance(p2A, p2B)
    }
+   /**
+    * new
+    * TODO: describe whats different
+    * TODO: rename to isCoDir
+    */
+   static func isCoDirectional(_ a1:CGPoint,_ a2:CGPoint,_ b1:CGPoint,_ b2:CGPoint) -> Bool {
+      let a:CGFloat = Trig.angle(a1, a2)
+      let b:CGFloat = Trig.angle(b1, b2)
+      return TrigAsserter.isCoDir(a, b)
+   }
 }

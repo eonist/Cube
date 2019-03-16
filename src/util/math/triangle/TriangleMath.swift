@@ -15,14 +15,20 @@ class TriangleMath{
       return a
    }
    /**
-    * TODO: This can be written better. you could rotate the world, you could use slope, you could use: aABTob or cBCTob or cBCTob2
+    * ortho point (Perpendicular on a line from a given point)
     */
    static func orthoPoint(p:CGPoint,line:(a:CGPoint,b:CGPoint)) -> CGPoint{
-      let orthoDist:CGFloat = TriangleMath.orthogonalDist(p: p, p1: line.a, p2: line.b)
-      let span:CGFloat = abs(Trig.difference(Trig.angle(line.a, line.b), Trig.angle(line.a, p)))
-      let angle:CGFloat = π - (π/2) - span
-      let angleToOrthoPoint:CGFloat = Trig.normalize(Trig.angle(p, line.a) + angle)
-      let polarPt:CGPoint = CGPoint.polarPoint(orthoDist, angleToOrthoPoint)
-      return p.add(polarPt)
+      let (x1,x2,x3,y1,y2,y3)  = (line.a.x,line.b.x,p.x,line.a.y,line.b.y,p.y)
+      // first convert line to normalized unit vector
+      var dx = x2 - x1;
+      var dy = y2 - y1;
+      let mag = sqrt(dx*dx + dy*dy)
+      dx /= mag
+      dy /= mag
+      // translate the point and get the dot product
+      let lambda = (dx * (x3 - x1)) + (dy * (y3 - y1))
+      let x4 = (dx * lambda) + x1
+      let y4 = (dy * lambda) + y1
+      return .init(x:x4,y:y4)
    }
 }
