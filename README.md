@@ -31,6 +31,8 @@ cubeGraphic.drawCube(cube: cube)
 - Mapping images to Quadrilaterals [https://github.com/paulz/PerspectiveTransform](https://github.com/paulz/PerspectiveTransform) 
 - Mapping image to Quad pt.2 [https://github.com/agens-no/AGGeometryKit](https://github.com/agens-no/AGGeometryKit) 
 - CATransform3d Cube: [google book](https://books.google.no/books?id=QfhdAAAAQBAJ&pg=PT96&lpg=PT96&dq=CATransform3DMakeTranslation+tz&source=bl&ots=O8sPEcsZ61&sig=ACfU3U3MW2lvhAN4dm4DEb4Nd-m71CJLVA&hl=en&sa=X&ved=2ahUKEwjM6Mjzh__gAhVw_SoKHetkAbsQ6AEwBHoECAUQAQ#v=onepage&q=CATransform3DMakeTranslation%20tz&f=false) 
+- Build a cube using CATransform3D:
+[https://www.cocoanetics.com/2012/08/cubed-coreanimation-conundrum/](https://www.cocoanetics.com/2012/08/cubed-coreanimation-conundrum/) 
 - JS Quad mapping: [http://jsfiddle.net/dFrHS/3/](http://jsfiddle.net/dFrHS/3/) 
 - Vanishing point logic: [https://www.handprint.com/HP/WCL/perspect4.html](https://www.handprint.com/HP/WCL/perspect4.html) 
 - Vanishing point problem: [https://math.stackexchange.com/questions/1418293/determine-cube-orientation-given-one-side-in-a-perspective-projection?rq=1](https://math.stackexchange.com/questions/1418293/determine-cube-orientation-given-one-side-in-a-perspective-projection?rq=1) 
