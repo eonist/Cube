@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 let π = CGFloat(Double.pi)/*Global variable*/
 let π2 = CGFloat(Double.pi/2)/*Global variable,pi/2*/

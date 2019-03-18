@@ -48,32 +48,33 @@ extension DebugCubeGraphic{
     *
     */
    public func debug(quad:Quad){
-      let quadCenter = CubeHelper.diagonalCenter(quadPoints: quad)
-      Swift.print("quadCenter:  \(quadCenter)")
-      let vp1 = CubeUtil.vp1(quad: quad,quadCenter:quadCenter)
+//      let quadCenter = CubeHelper.diagonalCenter(quadPoints: quad)
+      let center:CGPoint = CubeHelper.center(quad: quad)
+      
+      let vp1 = CubeUtil.vp1(quad: quad,center:center)
       Swift.print("vp1:  \(vp1)")
-      let vp2 = CubeUtil.vp2(quad: quad,quadCenter:quadCenter)
+      let vp2 = CubeUtil.vp2(quad: quad,center:center)
       Swift.print("vp2:  \(vp2)")
      
-      let vp3 = CubeUtil.vp3(vp1: vp1, vp2: vp2, quadCenter: quadCenter,quad:quad)
+      let vp3 = CubeUtil.vp3(vp1: vp1, vp2: vp2, center: center/*,quad:quad*/)
       Swift.print("vp3:  \(vp3)")
-      quadCenterDot.position = quadCenter
+      quadCenterDot.position = CubeHelper.diagonalCenter(quadPoints: quad)
       vp1Dot.position = vp1
       vp2Dot.position = vp2
       vp3Dot.position = vp3
-      let center = CubeHelper.center(quad: quad)
+//      let center = CubeHelper.center(quad: quad)
       _ = self.createLine(line: (vp1,center), color: .gray)
       _ = self.createLine(line: (vp2,center), color: .orange)
       _ = self.createLine(line: (vp1,vp3), color: .green)
       _ = self.createLine(line: (vp1,vp2), color: .purple)
 
-      let orthoPoint:CGPoint = CubeHelper.orthoPoint(line: (vp1,vp2), point: quadCenter)//find point on vanishingpointline, ortho to diagonal center of quad
+      let orthoPoint:CGPoint = CubeHelper.orthoPoint(line: (vp1,vp2), point: center)//find point on vanishingpointline, ortho to diagonal center of quad
 
       orthPTDot.frame.origin = orthoPoint
 //
 //      let rayPT = vp1.add(CGPointParser.polar(100, Trig.angle(vp1, vp3)))
 //      _ = self.createLine(line: (vp1,rayPT), color: .green)
-      _ = self.createLine(line: (orthoPoint,quadCenter), color: .magenta)
+      _ = self.createLine(line: (orthoPoint,center), color: .magenta)
       _ = self.createLine(line: (orthoPoint,vp3), color: .cyan)
    }
    func drawVPTriangle(){

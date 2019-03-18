@@ -9,6 +9,7 @@ extension CGPoint{
       return CGPointParser.distance(a,b)
    }
    func add(_ p:CGPoint)->CGPoint{return CGPointParser.add(self, p)}
+   static func midPt(_ a:CGPoint,_ b:CGPoint)->CGPoint{return CGPointParser.midPt(a: a, b: b)}
    func distance(_ p:CGPoint) -> CGFloat { return CGPoint.distance(self,p) }//distance from self to p
    static func interpolate(_ a:CGPoint, _ b:CGPoint, _ scalar:CGFloat) -> CGPoint{/*Convenience*/
       return CGPointParser.interpolate(a,b, scalar)

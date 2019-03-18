@@ -16,6 +16,7 @@ class CGPointParser{
     * Returns the distance between two points
     * NOTE: Math formula for distance of two points is: AB2 = dx2 + dy2 (distance = sqrt(dx2 + dy2)) where one side is dx - the difference in x-coordinates, and the other is dy - the difference in y-coordinates.
     * NOTE: Math formula: c^2=a^2+b^2 (||u|| = √h^2+v^2) (in triangle notation c= hypotenus etc)
+    * there is also : let distance = hypot(p1.x - p2.x, p1.y - p2.y)
     */
    static func distance(_ a:CGPoint,_ b:CGPoint) -> CGFloat{
       let xDifference:CGFloat = b.x - a.x
@@ -45,20 +46,17 @@ class CGPointParser{
    static func add(_ a:CGPoint,_ b:CGPoint) -> CGPoint {
       return CGPoint(x:a.x+b.x, y:a.y+b.y)
    }
-}
-extension CGFloat{
-   func interpolate(_ to:CGFloat, _ scalar:CGFloat) -> CGFloat{return CGFloatParser.interpolate(self,to,scalar)}
-}
-class CGFloatParser{
    /**
-    * Linearly interpolation (lerp)
-    * PARAM: a: start number
-    * PARAM: b: end number
-    * PARAM: fraction: interpolation value (between 0 - 1) could also be named scalar
-    * EXAMPLE: interpolate(5, 15, 0.5) //10
-    * EXAMPLE: interpolate(a: -150.0, b: -375.0, fraction: 0.1)//-172.5, also works on negative values 👌
+    * Returns a Point half way between a and b
     */
-   static func interpolate(_ a: CGFloat, _ b: CGFloat, _ fraction: CGFloat) -> CGFloat {
-      return fraction * (b - a) + a
+   static func midPt(a:CGPoint, b:CGPoint) -> CGPoint {
+      let minX:CGFloat =  min(a.x,b.x)
+      let minY:CGFloat =  min(a.y,b.y)
+      let maxX:CGFloat =  max(a.x,b.x)
+      let maxY:CGFloat =  max(a.y,b.y)
+      let x:CGFloat = minX+((maxX-minX)/2)
+      let y:CGFloat = minY+((maxY-minY)/2)
+      let center:CGPoint = .init(x:x,y:y)
+      return center
    }
 }
