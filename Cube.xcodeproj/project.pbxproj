@@ -48,6 +48,8 @@
 		F11ADF5D223C06160024F9C7 /* DebugCubeGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11ADF1D223BF7190024F9C7 /* DebugCubeGraphic.swift */; };
 		F11AE034223FEDEA0024F9C7 /* CGFloatParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11AE032223FED170024F9C7 /* CGFloatParser.swift */; };
 		F11AE035223FEDEB0024F9C7 /* CGFloatParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11AE032223FED170024F9C7 /* CGFloatParser.swift */; };
+		F11AE05E224029F50024F9C7 /* QuadUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11AE05C224029B40024F9C7 /* QuadUtil.swift */; };
+		F11AE05F224029F60024F9C7 /* QuadUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11AE05C224029B40024F9C7 /* QuadUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,7 @@
 		F11ADF3A223C060B0024F9C7 /* Cube_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cube_macOS.h; sourceTree = "<group>"; };
 		F11ADF3B223C060C0024F9C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F11AE032223FED170024F9C7 /* CGFloatParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatParser.swift; sourceTree = "<group>"; };
+		F11AE05C224029B40024F9C7 /* QuadUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,7 @@
 			children = (
 				F11ADF00223A8F5E0024F9C7 /* util */,
 				F11ADF17223BEEA90024F9C7 /* CubeUtil.swift */,
+				F11AE05C224029B40024F9C7 /* QuadUtil.swift */,
 				F11ADF19223BEED50024F9C7 /* Type.swift */,
 				F11ADF1B223BEF6D0024F9C7 /* CubeGraphic.swift */,
 				F11ADF1D223BF7190024F9C7 /* DebugCubeGraphic.swift */,
@@ -412,6 +416,7 @@
 				F11AE034223FEDEA0024F9C7 /* CGFloatParser.swift in Sources */,
 				F11ADF49223C06150024F9C7 /* CGPathParser.swift in Sources */,
 				F11ADF44223C06150024F9C7 /* TrigParser.swift in Sources */,
+				F11AE05E224029F50024F9C7 /* QuadUtil.swift in Sources */,
 				F11ADF43223C06150024F9C7 /* Trig.swift in Sources */,
 				F11ADF4D223C06150024F9C7 /* CubeGraphic.swift in Sources */,
 			);
@@ -435,6 +440,7 @@
 				F11AE035223FEDEB0024F9C7 /* CGFloatParser.swift in Sources */,
 				F11ADF58223C06160024F9C7 /* CGPathParser.swift in Sources */,
 				F11ADF53223C06160024F9C7 /* TrigParser.swift in Sources */,
+				F11AE05F224029F60024F9C7 /* QuadUtil.swift in Sources */,
 				F11ADF52223C06160024F9C7 /* Trig.swift in Sources */,
 				F11ADF5C223C06160024F9C7 /* CubeGraphic.swift in Sources */,
 			);

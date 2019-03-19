@@ -49,7 +49,7 @@ extension DebugCubeGraphic{
     */
    public func debug(quad:Quad){
 //      let quadCenter = CubeHelper.diagonalCenter(quadPoints: quad)
-      let center:CGPoint = CubeHelper.center(quad: quad)
+      let center:CGPoint = QuadUtil.center(quad: quad)
       
       let vp1 = CubeUtil.vp1(quad: quad,center:center)
       Swift.print("vp1:  \(vp1)")
@@ -58,7 +58,7 @@ extension DebugCubeGraphic{
      
       let vp3 = CubeUtil.vp3(vp1: vp1, vp2: vp2, center: center/*,quad:quad*/)
       Swift.print("vp3:  \(vp3)")
-      quadCenterDot.position = CubeHelper.diagonalCenter(quadPoints: quad)
+      quadCenterDot.position = QuadUtil.diagonalCenter(quadPoints: quad)
       vp1Dot.position = vp1
       vp2Dot.position = vp2
       vp3Dot.position = vp3
@@ -68,7 +68,7 @@ extension DebugCubeGraphic{
       _ = self.createLine(line: (vp1,vp3), color: .green)
       _ = self.createLine(line: (vp1,vp2), color: .purple)
 
-      let orthoPoint:CGPoint = CubeHelper.orthoPoint(line: (vp1,vp2), point: center)//find point on vanishingpointline, ortho to diagonal center of quad
+      let orthoPoint:CGPoint = QuadUtil.orthoPoint(line: (vp1,vp2), point: center)//find point on vanishingpointline, ortho to diagonal center of quad
 
       orthPTDot.frame.origin = orthoPoint
 //

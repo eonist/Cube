@@ -7,7 +7,7 @@ public class CubeUtil{
     * Abstract: imagine a perspective square in 3d space. Now draw a perfect cube around it with correct perspective
     */
    public static func cube(quad:Quad) -> Cube{
-      let center:CGPoint = CubeHelper.center(quad: quad)
+      let center:CGPoint = QuadUtil.center(quad: quad)
       let vp1 = CubeUtil.vp1(quad:quad, center:center )
       let vp2 = CubeUtil.vp2(quad: quad, center:center )
       let ratio = CubeUtil.ratio(vp1: vp1, vp2:vp2, quad: quad, center:center)
@@ -29,13 +29,13 @@ extension CubeUtil{
       let isCoDir = CGPointAsserter.isCoDirectional(horA.p1, horA.p2, horB.p1, horB.p2)
       Swift.print("isCoDir:  \(isCoDir)")
       if isCoDir {
-         let median:CGPoint = CubeHelper.center(quad: quad)//.init(x:CGPoint.interpolate(quad.p1, quad.p2, 0.5).x,y:CGPoint.interpolate(quad.p1, quad.p3, 0.5).y)//let median = quadCenter//CGPoint.interpolate(horA.p2, horB.p2, 0.5)
+         let median:CGPoint = QuadUtil.center(quad: quad)//.init(x:CGPoint.interpolate(quad.p1, quad.p2, 0.5).x,y:CGPoint.interpolate(quad.p1, quad.p3, 0.5).y)//let median = quadCenter//CGPoint.interpolate(horA.p2, horB.p2, 0.5)
          let angle = Trig.angle(horA.p1, horA.p2)
          let polarPT = CGPoint.polarPoint(CGFloat(UInt16.max), angle)
          let vp1 = median.add(polarPT)
          return vp1
       }else {
-         let vp1:CGPoint = CubeHelper.convergingPoint(a:horA,b:horB)//find converging point of horizontal lines
+         let vp1:CGPoint = QuadUtil.convergingPoint(a:horA,b:horB)//find converging point of horizontal lines
          return vp1
       }
    }
@@ -45,9 +45,9 @@ extension CubeUtil{
    static func vp2(quad:Quad,center:CGPoint)->CGPoint{
       let verA:Line = (quad.p1,quad.p3)//get vertical point pair / line pair
       let verB:Line = (quad.p2,quad.p4)
-      let vp2:CGPoint = CubeHelper.convergingPoint(a:verA,b:verB)//find convering point of vertical lines
+      let vp2:CGPoint = QuadUtil.convergingPoint(a:verA,b:verB)//find convering point of vertical lines
       if vp2.x.isInfinite && vp2.y.isInfinite {
-         let median:CGPoint = CubeHelper.center(quad: quad)
+         let median:CGPoint = QuadUtil.center(quad: quad)
          let angle = Trig.angle(verA.p1, verA.p2)
          let polarPT = CGPoint.polarPoint(CGFloat(UInt16.max), angle)
          return median.add(polarPT)
@@ -63,9 +63,9 @@ extension CubeUtil{
       let VP1_QC_VP3:CGFloat = (CGFloat.pi / 2) - span
       let VP1_QC:CGFloat = Trig.angle(vp1, center)
       let VP1_VP3:CGFloat = Trig.normalize(VP1_QC+VP1_QC_VP3)
-      let orthoPoint:CGPoint = CubeHelper.orthoPoint(line: (vp1,vp2), point: center)//find point on vanishingpointline, ortho to diagonal center of quad
+      let orthoPoint:CGPoint = QuadUtil.orthoPoint(line: (vp1,vp2), point: center)//find point on vanishingpointline, ortho to diagonal center of quad
       let ORTHO_PT_QUAD_PT:CGFloat = Trig.angle( orthoPoint, center)//find converging points of these two rays (this is vp3)
-      let vp3:CGPoint = CubeHelper.convergingPoint(a: vp1, aAngle: VP1_VP3, b: orthoPoint, bAngle: ORTHO_PT_QUAD_PT)
+      let vp3:CGPoint = QuadUtil.convergingPoint(a: vp1, aAngle: VP1_VP3, b: orthoPoint, bAngle: ORTHO_PT_QUAD_PT)
       return vp3
    }
 }
@@ -79,7 +79,6 @@ extension CubeUtil {
     * - TODO: ⚠️️ THIS NEEDS BETTER CODE ⚠️️, you have to figure out which 2 points are closer to vp, but less complicated than this
     */
    static func ratio(vp1:CGPoint, vp2:CGPoint,quad:Quad, center:CGPoint/*, quadCenter:CGPoint*/ ) -> (inward:CGFloat,outward:CGFloat){
-      
 //      Swift.print("center:  \(center)")
       let vp1Dist = CGPoint.distance(vp1,center)
 //      Swift.print("vp1Dist:  \(vp1Dist)")
@@ -103,8 +102,8 @@ extension CubeUtil {
          }
       }()
 //      Swift.print("side:  \(side)")
-      let diagonalCenter:CGPoint = CubeHelper.diagonalCenter(quadPoints: quad)//find diagonal center of quadereliteral
-      let halfSidePT:CGPoint = CubeHelper.convergingPoint(a: (closestVP,diagonalCenter), b:side)
+      let diagonalCenter:CGPoint = QuadUtil.diagonalCenter(quadPoints: quad)//find diagonal center of quadereliteral
+      let halfSidePT:CGPoint = QuadUtil.convergingPoint(a: (closestVP,diagonalCenter), b:side)
 //      Swift.print("halfSidePT:  \(halfSidePT)")
       let vpLength:CGFloat = CGPointParser.distance(diagonalCenter, closestVP)
 //      Swift.print("vp1Length:  \(vpLength)")
@@ -155,55 +154,5 @@ extension CubeUtil{
       let box7FromVP3:CGPoint = CGPoint.interpolate(vp3,quad.p3, increaseRatio)
       let box8FromVP3:CGPoint = CGPoint.interpolate(vp3,quad.p4, increaseRatio)
       return (box5FromVP3,box6FromVP3,box7FromVP3,box8FromVP3)
-   }
-}
-/**
- * Helpers
- */
-class CubeHelper{
-   /**
-    * convergingPoint
-    */
-   static func convergingPoint(a:Line,b:Line) -> CGPoint{
-      let pointAndAngle:(p1:CGPoint,p2:CGPoint,a:CGFloat,b:CGFloat) = {
-         let angleA:CGFloat = Trig.angle(a.p1, a.p2)
-         let angleB:CGFloat = Trig.angle(b.p1, b.p2)
-         let isConverging:Bool = CGPointAsserter.converging(a.p1, b.p1,angleA ,angleB )
-         if isConverging {
-            return (a.p1,b.p1,angleA,angleB)
-         }else {
-            return (a.p2,b.p2,Trig.angle(a.p1, a.p2),Trig.angle(b.p1, b.p2))
-         }
-      }()
-      return TriangleMath.convergingPoint(p1: pointAndAngle.p1, p2: pointAndAngle.p2, angleA: pointAndAngle.a, angleB: pointAndAngle.b)
-   }
-   /**
-    * diagonalCenter
-    */
-   static func diagonalCenter(quadPoints:Quad) -> CGPoint{
-      let diagonalA:Line = (quadPoints.p1,quadPoints.p4)
-      let diagonalB:Line = (quadPoints.p2,quadPoints.p3)
-      let vp1:CGPoint = CubeHelper.convergingPoint(a:diagonalA,b:diagonalB)//find convering point of horizontal lines
-      return vp1
-   }
-   /**
-    * center
-    */
-   static func center(quad:Quad) -> CGPoint{
-      let x = CGPoint.midPt(quad.p1, quad.p2).x
-      let y = CGPoint.midPt(quad.p1, quad.p3).y
-      return .init(x:x,y:y)//let median = quadCenter//CGPoint.interpolate(horA.p2, horB.p2, 0.5)
-   }
-   /**
-    * converingPoint (Ray
-    */
-   static func convergingPoint(a:CGPoint,aAngle:CGFloat,b:CGPoint,bAngle:CGFloat) -> CGPoint {
-      return TriangleMath.convergingPoint(p1: a, p2: b, angleA: aAngle, angleB: bAngle)
-   }
-   /**
-    * orthoPoint
-    */
-   static func orthoPoint(line:Line,point:CGPoint) -> CGPoint{
-      return TriangleMath.orthoPoint(p: point, line: (line.p1,line.p2))
    }
 }
